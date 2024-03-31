@@ -1,8 +1,6 @@
-import inquirer from "inquirer"
-
-let todos = []
-
-let addTasks = await inquirer.prompt([
+import inquirer from "inquirer";
+let todos = [];
+let questions = inquirer.prompt([
     {
         name: "todo",
         type: "input",
@@ -12,7 +10,5 @@ let addTasks = await inquirer.prompt([
         name: "addmore",
         type: "confirm",
         message: "Do you want to add more?",
-        default: "false",
     }
 ]);
-
